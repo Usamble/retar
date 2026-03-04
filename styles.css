@@ -49,6 +49,46 @@ body::before {
   align-items: center;
 }
 
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 2px solid var(--orange-border);
+  border-radius: 10px;
+  background: var(--orange-soft);
+  color: var(--orange);
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--orange);
+  border-radius: 1px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.nav.is-open .nav-toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav.is-open .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+.nav.is-open .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Desktop: nav-menu is transparent so logo | nav | cta stay in one row */
+.nav-menu {
+  display: contents;
+}
+
 .nav-logo-text {
   font-family: "Just Me Again Down Here", cursive;
   font-size: clamp(1.8rem, 3vw, 3rem);
@@ -350,9 +390,204 @@ button.copied .copy-done    { opacity: 1; }
 
 /* ── Mobile ── */
 @media (max-width: 900px) {
-  .nav { grid-template-columns: 1fr; top: 4px; }
-  nav { justify-content: flex-start; }
-  h1 { font-size: clamp(2rem, 9vw, 4rem); }
-  .steps { grid-template-columns: 1fr; }
-  .ca-box { border-radius: 20px; padding: 10px 14px; }
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  .nav {
+    grid-template-columns: 1fr auto;
+    top: 4px;
+    width: calc(100% - 16px);
+    margin: 8px auto 0;
+    padding: 10px 14px;
+    gap: 0;
+    border-radius: 16px;
+  }
+
+  .nav-toggle {
+    display: flex;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .nav-logo-text {
+    font-size: 1.5rem;
+    text-align: left;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  .nav-menu {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--orange-border);
+    margin-top: 4px;
+  }
+
+  .nav.is-open .nav-menu {
+    display: flex;
+  }
+
+  .nav-menu nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav-menu nav a {
+    font-size: 1.3rem;
+    padding: 14px 12px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
+  .nav-menu nav a:hover,
+  .nav-menu nav a:focus {
+    background: var(--orange-soft);
+  }
+
+  .nav-cta-wrap {
+    justify-content: stretch;
+    gap: 10px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--orange-border);
+  }
+
+  .nav-cta {
+    flex: 1;
+    font-size: 1.2rem;
+    padding: 12px 16px;
+    min-height: 48px;
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    width: calc(100% - 24px);
+    margin: 0 auto 48px;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .hero {
+    padding: 16px 0 0;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 10vw, 4rem);
+    white-space: normal;
+    word-break: break-word;
+    line-height: 0.95;
+  }
+
+  .hero-sub {
+    font-size: 1.35rem;
+    margin: 2px 0 16px;
+  }
+
+  .hero-logo-wrap {
+    width: 92%;
+    margin: 0 auto 20px;
+  }
+
+  .ca-box {
+    flex-wrap: wrap;
+    border-radius: 20px;
+    padding: 12px 14px;
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .ca-box > span {
+    font-size: 1.2rem;
+    order: 1;
+  }
+
+  .ca-box button {
+    order: 2;
+    min-width: 120px;
+    padding: 12px 16px;
+    font-size: 1.1rem;
+    min-height: 44px;
+  }
+
+  .ca-box code {
+    font-size: 0.7rem;
+    order: 3;
+    width: 100%;
+    min-width: 0;
+    flex-basis: 100%;
+  }
+
+  .content {
+    margin-top: 48px;
+  }
+
+  .content > p {
+    font-size: 1.2rem;
+    margin: 8px 0 0;
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 8vw, 4rem);
+  }
+
+  .about-img-wrap {
+    margin-top: 14px;
+    border-radius: 12px;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .steps article {
+    padding: 16px 14px;
+    border-radius: 16px;
+  }
+
+  .steps article h3 {
+    font-size: 2rem;
+  }
+
+  .steps article p {
+    font-size: 1.15rem;
+    margin: 6px 0 12px;
+  }
+
+  .steps img {
+    border-radius: 10px;
+  }
+
+  .tokenomics-img {
+    margin-top: 14px;
+    border-radius: 12px;
+  }
+
+  .marquee-wrapper {
+    margin-top: 14px;
+    padding: 6px 0;
+  }
+
+  .marquee-row span {
+    font-size: 1.4rem;
+    padding-right: 24px;
+  }
+
+  #disclaimer p {
+    font-size: 0.95rem;
+  }
 }

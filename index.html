@@ -15,23 +15,30 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="nav">
+    <header class="nav" id="nav">
       <span class="nav-logo-text">retardism coin</span>
-      <nav>
-        <a href="#about">ABOUT</a>
-        <a href="#buy">HOW TO BUY</a>
-        <a href="#tokenomics">TOKENOMICS</a>
-      </nav>
-      <div class="nav-cta-wrap">
-        <a href="https://x.com/i/communities/2028976253995204822" target="_blank" rel="noopener noreferrer" class="nav-cta nav-cta-x">𝕏</a>
-        <a href="#buy" class="nav-cta">BUY $RETARDISM</a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <nav>
+          <a href="#about">ABOUT</a>
+          <a href="#buy">HOW TO BUY</a>
+          <a href="#tokenomics">TOKENOMICS</a>
+        </nav>
+        <div class="nav-cta-wrap">
+          <a href="https://x.com/i/communities/2028976253995204822" target="_blank" rel="noopener noreferrer" class="nav-cta nav-cta-x">𝕏</a>
+          <a href="#buy" class="nav-cta">BUY $RETARDISM</a>
+        </div>
       </div>
     </header>
 
     <main>
       <section class="hero reveal">
         <h1>RETARDISM COIN</h1>
-        <p class="hero-sub">The Bitcoin for Retards</p>
+        <p class="hero-sub">The Coin for Retards</p>
         <div class="hero-logo-wrap">
           <img src="assets/r-logo.png" alt="Retardism Coin mascot" class="hero-logo" />
         </div>

@@ -37,6 +37,18 @@ for (const el of revealElements) {
   observer.observe(el);
 }
 
+const nav = document.getElementById("nav");
+const navToggle = document.getElementById("navToggle");
+const navMenu = document.getElementById("navMenu");
+
+if (navToggle && nav) {
+  navToggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", open);
+    navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+}
+
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     const targetId = link.getAttribute("href");
@@ -45,5 +57,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     if (!target) return;
     event.preventDefault();
     target.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (nav && nav.classList.contains("is-open")) nav.classList.remove("is-open");
+    if (navToggle) navToggle.setAttribute("aria-expanded", "false");
   });
 });
