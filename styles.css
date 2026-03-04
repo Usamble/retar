@@ -503,23 +503,23 @@ button.copied .copy-done    { opacity: 1; }
 
   .ca-box {
     flex-wrap: wrap;
-    border-radius: 20px;
-    padding: 12px 14px;
-    gap: 10px;
+    border-radius: 16px;
+    padding: 14px 12px;
+    gap: 12px;
     max-width: 100%;
   }
 
   .ca-box > span {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     order: 1;
   }
 
   .ca-box button {
     order: 2;
-    min-width: 120px;
-    padding: 12px 16px;
-    font-size: 1.1rem;
+    padding: 10px 14px;
+    font-size: 1rem;
     min-height: 44px;
+    flex: 0 0 auto;
   }
 
   .ca-box code {
@@ -528,6 +528,10 @@ button.copied .copy-done    { opacity: 1; }
     width: 100%;
     min-width: 0;
     flex-basis: 100%;
+    white-space: normal;
+    word-break: break-all;
+    line-height: 1.35;
+    padding-top: 2px;
   }
 
   .content {
