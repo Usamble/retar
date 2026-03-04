@@ -282,7 +282,7 @@ button.copied .copy-done    { opacity: 1; }
   height: auto;
   margin-top: 20px;
   border-radius: 16px;
-  mix-blend-mode: multiply;
+
 }
 
 /* ── Marquee ── */
