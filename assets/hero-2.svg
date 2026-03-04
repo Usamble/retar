@@ -1,0 +1,24 @@
+<svg viewBox="-36 -36 1096 1096" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Retardio logo">
+  <path d="M140 640c-52-22-86-74-86-136 0-72 47-133 112-152 36-93 126-153 228-153 12 0 24 1 36 3 43-53 108-86 181-86 4 0 8 0 12 0 35-24 76-38 120-38 121 0 220 99 220 220 0 27-5 54-15 78 61 32 101 96 101 169 0 104-84 188-188 188H140z"
+    fill="none" stroke="#f4a022" stroke-width="54" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M344 332l-47 96" stroke="#f4a022" stroke-width="42" stroke-linecap="round"/>
+  <path d="M512 300l-70 99" stroke="#f4a022" stroke-width="42" stroke-linecap="round"/>
+  <path d="M700 316l-67 107" stroke="#f4a022" stroke-width="42" stroke-linecap="round"/>
+
+  <path d="M432 210l56-60h46l-62 78" fill="none" stroke="#f4a022" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M552 198l72-74h50l-84 96" fill="none" stroke="#f4a022" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="410" cy="552" r="88" fill="none" stroke="#f4a022" stroke-width="36"/>
+  <circle cx="610" cy="552" r="88" fill="none" stroke="#f4a022" stroke-width="36"/>
+
+  <path d="M362 552c32-30 94-30 126 0" fill="none" stroke="#f4a022" stroke-width="28" stroke-linecap="round"/>
+  <path d="M560 552c32-30 94-30 126 0" fill="none" stroke="#f4a022" stroke-width="28" stroke-linecap="round"/>
+
+  <path d="M360 724c112 82 282 82 392 0" fill="none" stroke="#68000f" stroke-width="40" stroke-linecap="round"/>
+
+  <path d="M512 720c65 40 97 115 28 186-63-14-99-52-112-104 24-40 52-66 84-82z" fill="#f84e78"/>
+  <path d="M485 760c15 4 29 11 42 20" fill="none" stroke="#ff8da7" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="526" cy="852" rx="24" ry="26" fill="#f4a022"/>
+  <path d="M514 862c2 26 12 50 27 70" fill="none" stroke="#f84e78" stroke-width="8" stroke-linecap="round"/>
+</svg>
